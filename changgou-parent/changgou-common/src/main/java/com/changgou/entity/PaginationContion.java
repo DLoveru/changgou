@@ -3,7 +3,7 @@ package com.changgou.entity;
 import java.io.Serializable;
 import java.util.List;
 
-public class Page <T> implements Serializable{
+public class PaginationContion<T> implements Serializable{
 
 	// 页数（第几页）
 	private long currentpage;
@@ -16,23 +16,23 @@ public class Page <T> implements Serializable{
 
 	// 下页
 	private int next;
-	
+
 	private List<T> list;
 
 	// 最后一页
 	private int last;
-	
+
 	private int lpage;
-	
+
 	private int rpage;
-	
+
 	//从哪条开始查
 	private long start;
-	
+
 	//全局偏移量
 	public int offsize = 2;
-	
-	public Page() {
+
+	public PaginationContion() {
 		super();
 	}
 
@@ -80,7 +80,7 @@ public class Page <T> implements Serializable{
 	 * @param pagesize
 	 * @param offsize
 	 */
-	public Page(long total,int currentpage,int pagesize,int offsize) {
+	public PaginationContion(long total, int currentpage, int pagesize, int offsize) {
 		this.offsize = offsize;
 		initPage(total, currentpage, pagesize);
 	}
@@ -91,7 +91,7 @@ public class Page <T> implements Serializable{
 	 * @param currentpage	当前页
 	 * @param pagesize	每页显示多少条
 	 */
-	public Page(long total,int currentpage,int pagesize) {
+	public PaginationContion(long total, int currentpage, int pagesize) {
 		initPage(total,currentpage,pagesize);
 	}
 
@@ -232,7 +232,7 @@ public class Page <T> implements Serializable{
 			//当前页
 			//每页显示多少条
 			int cpage =17;
-			Page page = new Page(1001,cpage,50,7);
-			System.out.println("开始页:"+page.getLpage()+"__当前页："+page.getCurrentpage()+"__结束页"+page.getRpage()+"____总页数："+page.getLast());
+			PaginationContion paginationContion = new PaginationContion(1001,cpage,50,7);
+			System.out.println("开始页:"+ paginationContion.getLpage()+"__当前页："+ paginationContion.getCurrentpage()+"__结束页"+ paginationContion.getRpage()+"____总页数："+ paginationContion.getLast());
 	}
 }
