@@ -10,6 +10,43 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>changgou-common</artifactId>
-
-
+    <dependencies>
+        <!--web起步依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!-- redis 使用-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+        <!--eureka-client-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <!--openfeign-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+<!--        &lt;!&ndash;微信支付&ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>com.github.wxpay</groupId>-->
+<!--            <artifactId>wxpay-sdk</artifactId>-->
+<!--            <version>0.0.3</version>-->
+<!--        </dependency>-->
+        <!--httpclient支持-->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+        </dependency>
+        <!--oauth依赖-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-oauth2</artifactId>
+            <!-- <scope>provided</scope>-->
+        </dependency>
+    </dependencies>
 </project>
