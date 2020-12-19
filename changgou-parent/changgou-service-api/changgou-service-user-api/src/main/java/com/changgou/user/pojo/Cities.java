@@ -1,5 +1,7 @@
 package com.changgou.user.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableName;
+
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -10,7 +12,7 @@ import java.io.Serializable;
  * @Description:Cities构建
  * @Date 2019/6/14 19:13
  *****/
-@Table(name="tb_cities")
+@TableName(value="tb_cities")
 public class Cities implements Serializable{
 
 	@Id

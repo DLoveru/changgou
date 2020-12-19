@@ -1,5 +1,7 @@
 package com.changgou.user.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableName;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
@@ -9,7 +11,7 @@ import java.util.Date;
  * @Description:UndoLog构建
  * @Date 2019/6/14 19:13
  *****/
-@Table(name="undo_log")
+@TableName(value="undo_log")
 public class UndoLog implements Serializable{
 
 	@Id

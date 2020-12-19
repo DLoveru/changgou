@@ -1,5 +1,7 @@
 package com.changgou.user.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableName;
+
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -10,7 +12,7 @@ import java.io.Serializable;
  * @Description:OauthClientDetails构建
  * @Date 2019/6/14 19:13
  *****/
-@Table(name="oauth_client_details")
+@TableName(value="oauth_client_details")
 public class OauthClientDetails implements Serializable{
 
 	@Id

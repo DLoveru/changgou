@@ -1,5 +1,7 @@
 package com.changgou.user.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableName;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -8,7 +10,7 @@ import java.io.Serializable;
  * @Description:Address构建
  * @Date 2019/6/14 19:13
  *****/
-@Table(name="tb_address")
+@TableName(value="tb_address")
 public class Address implements Serializable{
 
 	@Id
