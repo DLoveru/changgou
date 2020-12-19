@@ -1,4 +1,4 @@
-package com.file;
+package com.changgou.file;
 
 import java.io.Serializable;
 

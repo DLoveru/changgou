@@ -1,6 +1,6 @@
 package com.changgou.test;
 
-import com.utils.FastDFSClient;
+import com.changgou.utils.FastDFSClient;
 import org.apache.commons.io.IOUtils;
 import org.csource.fastdfs.FileInfo;
 import org.csource.fastdfs.ServerInfo;
@@ -19,6 +19,8 @@ import java.util.Date;
 public class FastDFSFileTest {
 
 
+
+
     /**
      * 测试下载文件
      *
@@ -27,9 +29,9 @@ public class FastDFSFileTest {
     @Test
     public void testDowloadFile() throws Exception {
         String group_name = "group1";
-        String remote_filename = "M00/00/00/wKjThF1WdAeARS2xAA3VG0zdyVY121.jpg";
+        String remote_filename = "M00/00/00/CgAEBF_d3zGAS6UcAAUDy-xuoII88..jpg";
         byte[] dowloadFile = FastDFSClient.dowloadFile(group_name, remote_filename);
-        IOUtils.write(dowloadFile, new FileOutputStream("F:/ee/1.jpg"));
+        IOUtils.write(dowloadFile, new FileOutputStream("F:/fastdfs/1.jpg"));
     }
 
     /**
@@ -51,7 +53,7 @@ public class FastDFSFileTest {
     @Test
     public void getFileInfo() {
         String group_name = "group1";
-        String remote_filename = "M00/00/00/wKjThF1WdAeARS2xAA3VG0zdyVY121.jpg";
+        String remote_filename = "M00/00/00/CgAEBF_d3zGAS6UcAAUDy-xuoII88..jpg";
         FileInfo fileInfo = FastDFSClient.getFileInfo(group_name, remote_filename);
         String ipAddr = fileInfo.getSourceIpAddr();
         long fileSize = fileInfo.getFileSize();

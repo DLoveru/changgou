@@ -1,9 +1,12 @@
-package com.search.controller;
+package com.changgou.search.controller;
 
 import com.changgou.file.FastDFSFile;
 import com.changgou.utils.FastDFSClient;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
@@ -15,10 +18,11 @@ import java.io.IOException;
  */
 @RestController
 @CrossOrigin
+@RequestMapping(value = "/file")
 public class FileController {
 
     @PostMapping("/upload")
-    public String upload(@RequestParam("file") MultipartFile file) {
+    public String upload(@RequestBody  MultipartFile file) {
         String path = "";
         try {
             path = saveFile(file);
@@ -49,8 +53,12 @@ public class FileController {
         //5. 上传
         String[] uploadResults = FastDFSClient.uploadFile(fastDFSFile);
         //6. 拼接上传后的文件的完整路径和名字, uploadResults[0]为组名, uploadResults[1]为文件名称和路径
-        String path = FastDFSClient.getServerUrl() + uploadResults[0] + "/" + uploadResults[1];
+        String path = FastDFSClient.getServerUrl() +"/"+uploadResults[0] + "/" + uploadResults[1];
         //7. 返回
         return path;
+    }
+    @GetMapping("/test")
+    public String testFile(){
+        return "test";
     }
 }

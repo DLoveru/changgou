@@ -1,15 +1,12 @@
-package com.utils;
+package com.changgou.utils;
 
-import com.file.FastDFSFile;
-import org.apache.commons.lang.text.StrTokenizer;
+import com.changgou.file.FastDFSFile;
 import org.csource.common.NameValuePair;
 import org.csource.fastdfs.*;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.ClassPathResource;
 
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 
 /**
  * 封装FastDFS的api工具类

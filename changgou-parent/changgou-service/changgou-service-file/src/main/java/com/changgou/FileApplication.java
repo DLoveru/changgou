@@ -2,18 +2,16 @@ package com.changgou;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
- * @author Jalen.Deng
- * @description 文件存储服务启动类
- * @date 2020/12/19 15:46
- **/
-@SpringBootApplication
+ * 文件上传
+ */
+@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 @EnableEurekaClient
 public class FileApplication {
-
     public static void main(String[] args) {
-        SpringApplication.run(FileApplication.class);
+        SpringApplication.run(FileApplication.class, args);
     }
 }

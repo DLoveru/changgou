@@ -46,11 +46,11 @@
             <version>3.4.1</version>
             <scope>compile</scope>
         </dependency>
-        <!--oauth依赖-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-oauth2</artifactId>
-            <!-- <scope>provided</scope>-->
-        </dependency>
+<!--        &lt;!&ndash;oauth依赖&ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-oauth2</artifactId>-->
+<!--             <scope>provided</scope>-->
+<!--        </dependency>-->
     </dependencies>
 </project>
