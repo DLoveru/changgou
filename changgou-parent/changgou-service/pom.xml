@@ -13,6 +13,7 @@
     <modules>
         <module>changgou-service-user</module>
         <module>changgou-service-file</module>
+        <module>changgou-service-goods</module>
     </modules>
     <dependencies>
         <dependency>

@@ -1,0 +1,45 @@
+server:
+  port: 18081
+spring:
+  application:
+    name: goods
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/changgou_goods?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: root
+#  rabbitmq:
+#    host: 172.168.20.221
+  redis:
+    host: 121.4.78.126
+    port: 6379
+  main:
+    allow-bean-definition-overriding: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:7001/eureka
+  instance:
+    prefer-ip-address: true
+#feign:
+#  hystrix:
+#    enabled: true
+##hystrix 配置
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        timeout:
+#          #如果enabled设置为false，则请求超时交给ribbon控制
+#          enabled: true
+#        isolation:
+#          strategy: SEMAPHORE
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package: com.changgou.goods.pojo
+
+# 分布式ID生成器
+# workerId: 0
+# datacenterId: 0
